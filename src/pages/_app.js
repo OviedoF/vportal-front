@@ -20,6 +20,8 @@ export default function App({ Component, pageProps }) {
           --color-vlight: #F7F7F7;
           --color-black: #000000;
           --color-white: #FFFFFF;
+          --color-one-svg: #E5A4ED;
+          --color-two-svg: #7A5BF0;
         }
 
         body {

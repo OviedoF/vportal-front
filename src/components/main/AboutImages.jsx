@@ -128,7 +128,7 @@ export default function AboutImages() {
             <style jsx>{`
             .images {
                 width: 40%;
-                height: 60%;
+                height: 100%;
                 float: left;
                 position: relative;
             }

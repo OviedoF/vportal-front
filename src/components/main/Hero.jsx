@@ -5,7 +5,7 @@ export default function Hero() {
     return (
         <section id='hero'>
 
-            <div className="text">
+            <div className="text_hero">
                 <hr />
 
                 <h1>Somos
@@ -54,7 +54,7 @@ export default function Hero() {
                 fill: var(--color-vdark);
             }
 
-            .text{
+            .text_hero{
                 width: 40%;
                 height: 100vh;
                 display: flex;
@@ -65,25 +65,25 @@ export default function Hero() {
                 position: relative;
             }
 
-            .text hr {
+            .text_hero hr {
                 height: 50%;
                 position: absolute;
                 left: 2rem;
             }
 
-            .text h1 span {
+            .text_hero h1 span {
                 font-size: 5.5rem;
             }
 
-            .text h2 {
+            .text_hero h2 {
                 margin-top: 2rem;
             }
 
-            .text h2 span {
+            .text_hero h2 span {
                 text-decoration: line-through;
             }
 
-            .text h2 .dreams {
+            .text_hero h2 .dreams {
                 text-decoration: none;
                 color: var(--color-alternative-two);
             }

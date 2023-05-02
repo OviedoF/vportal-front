@@ -58,3 +58,26 @@ h2{
 	font-size: 2rem;
 	font-weight: 400;
 }
+
+.text {
+	width: 60%;
+	padding: 0 4rem;
+	z-index: 2;
+	position: relative;
+}
+
+.text h2 {
+	margin-top: 2rem;
+	text-align: center;
+}
+
+.text p {
+	margin-top: 2rem;
+	text-align: left;
+	font-size: 1.2rem;
+	letter-spacing: 1px;
+}
+
+strong, b{
+	font-weight: 600;
+}

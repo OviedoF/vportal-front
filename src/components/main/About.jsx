@@ -10,36 +10,20 @@ export default function About() {
                 <h2>¿Quienes somos?</h2>
                 <p>Somos una empresa de desarrollo de software y UX/UI que se destaca por la calidad de nuestros diseños y la fluidez de nuestras aplicaciones.</p>
 
-                <p>Nos enorgullece brindar soluciones tecnológicas innovadoras y efectivas que generen impacto y agreguen valor a nuestros clientes y sus usuarios. Si buscas llevar tus ideas al siguiente nivel, ¡contáctanos! Estamos aquí para ayudarte a cumplir tus sueños a través de la tecnología.</p>
+                <p>Nos enorgullece brindar soluciones tecnológicas innovadoras y efectivas que generen impacto y agreguen valor a nuestros clientes y sus usuarios.Ya sea que necesites una aplicación móvil, un sitio web o una solución de software empresarial, estamos aquí para ayudarte a que tu idea se convierta en realidad.</p>
+
+                <p>¡Permítenos ser tu <strong>portal</strong> al éxito!</p>
             </div>
 
             <style jsx>{`
             .about {
                 width: 100%;
-                height: 100vh;
+                height: 70vh;
                 display: flex;
-                padding: 100px 10%;
+                padding: 0px 10%;
                 position: relative;
                 justify-content: space-between;
-            }
-
-            .text {
-                width: 60%;
-                padding: 0 4rem;
-                z-index: 2;
-                position: relative;
-            }
-
-            .text h2 {
-                margin-top: 2rem;
-                text-align: center;
-            }
-
-            .text p {
-                margin-top: 2rem;
-                text-align: left;
-                font-size: 1.2rem;
-                letter-spacing: 1px;
+                align-items: center;
             }
         `}</style>
         </section>
