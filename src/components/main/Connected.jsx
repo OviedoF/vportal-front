@@ -23,10 +23,11 @@ export default function Connected() {
                 width: 100%;
                 height: 60vh;
                 display: flex;
-                padding: 0px 10%;
+                padding: 0px var(--padding-sections-horizontal);
                 position: relative;
                 justify-content: space-between;
                 align-items: center;
+                margin-bottom: 8rem;
             }
 
             #connected .text{

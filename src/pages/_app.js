@@ -15,6 +15,8 @@ export default function App({ Component, pageProps }) {
           --color-dark: #393E46;
           --color-medium: #929AAB;
           --color-alternative: #2D46B9;
+          --color-alternative-variant: rgba(94,113,201,1);
+          --color-alternative-variant-dark: rgb(30, 52, 151);
           --color-alternative-two: #FFE15D;
           --color-light: #EEEEEE;
           --color-vlight: #F7F7F7;
@@ -22,6 +24,8 @@ export default function App({ Component, pageProps }) {
           --color-white: #FFFFFF;
           --color-one-svg: #E5A4ED;
           --color-two-svg: #7A5BF0;
+          --color-danger: #dc3545;
+          --color-success: #28a745;
         }
 
         body {

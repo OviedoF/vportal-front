@@ -35,6 +35,7 @@ export default function HeroScene() {
         //OrbitControls
         const orbitControls = new OrbitControls(camera, renderer.domElement);
         orbitControls.enableDamping = true;
+        orbitControls.enableZoom = false;
 
         //Resize canvas
         const resize = () => {
@@ -170,8 +171,11 @@ export default function HeroScene() {
             <style jsx>{`
                 .scene {
                     width: 60%;
-                    height: 100%;
+                    height: 115%;
                     z-index: 2;
+                    position: relative;
+                    top: 0;
+                    left: -30px;
                 }
             `}</style>
         </>

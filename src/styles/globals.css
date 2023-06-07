@@ -2,6 +2,7 @@
 
 :root{
 	--font-stylized: 'Permanent Marker', 'Kaushan Script', 'Courgette', cursive;
+	--padding-sections-horizontal: 10%;
 }
 
 html, body, div, span, applet, object, iframe,

@@ -20,7 +20,7 @@ export default function About() {
                 width: 100%;
                 height: 70vh;
                 display: flex;
-                padding: 0px 10%;
+                padding: 0px var(--padding-sections-horizontal);
                 position: relative;
                 justify-content: space-between;
                 align-items: center;
