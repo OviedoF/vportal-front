@@ -79,9 +79,7 @@ export default function ConnectedSVG() {
                 const position_one_index = values.findIndex(value => value.x === position_one.x && value.y === position_one.y)
                 const position_two_index = values.findIndex(value => value.x === position_two.x && value.y === position_two.y)
                 const position_three_index = values.findIndex(value => value.x === position_three.x && value.y === position_three.y)
-
-                console.log(position_one_index, position_two_index, position_three_index)
-
+                
                 position_one = {
                     x: values[position_one_index + 1]?.x,
                     y: values[position_one_index + 1]?.y

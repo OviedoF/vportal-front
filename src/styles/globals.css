@@ -82,3 +82,7 @@ h2{
 strong, b{
 	font-weight: 600;
 }
+
+.disclaimer{
+	opacity: 0.5;
+}

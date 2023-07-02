@@ -48,16 +48,15 @@ export default function HeroScene() {
         //load model
         const loadingManager = new THREE.LoadingManager(
             () => {
-                console.log("Loaded");
             },
             (itemUrl, itemsToLoad, itemsLoaded) => {
                 /* write items loader percent */
-                console.log(
-                    `${itemsToLoad / itemsLoaded * 100}% loaded: ${itemUrl}`
-                );
+                // console.log(
+                //     `${itemsToLoad / itemsLoaded * 100}% loaded: ${itemUrl}`
+                // );
             },
             (error) => {
-                console.error(error);
+                // console.error(error);
             }
         );
         const gltfLoader = new GLTFLoader(loadingManager);
@@ -70,7 +69,7 @@ export default function HeroScene() {
             gltf.scene.traverse((node) => {
                 if (node.isMesh) {
                     const material = node.material;
-                    console.log(material.name);
+                    // console.log(material.name);
                 
                     // Verificar si el material tiene una textura y asignarla a la textura del planeta
                     if (material.name === 'Planet' && material.map === null) {
@@ -98,11 +97,11 @@ export default function HeroScene() {
 
             scene.add(gltf.scene);
             castAndReceiveShadow();
-            console.log('Loaded');
+            // console.log('Loaded');
         }, () => {
-            console.log('Loading...');
+            // console.log('Loading...');
         }, (error) => {
-            console.error(error);
+            // console.error(error);
         });
 
         // Cast and receive shadows
@@ -158,7 +157,6 @@ export default function HeroScene() {
             try {
                 gui.destroy();
             } catch (e) {
-                console.log(e);
             }
         };
 

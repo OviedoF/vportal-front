@@ -1,39 +1,50 @@
 import Image from 'next/image'
 import React, { useRef, useEffect } from 'react'
 
-export default function TecnologyIcon({ setHoverActive, hoverActive, icon, name }) {
+export default function TecnologyIcon({ setHoverActive, hoverActive, icon, name, desordened, setDesordened }) {
   const fishRef = useRef(null);
 
   useEffect(() => {
-    const fishElement = fishRef.current;
-    const containerWidth = fishElement.parentElement.offsetWidth;
-    const randomX = Math.floor(Math.random() * (containerWidth + 80)) - 80;
-    const randomSpeed = Math.floor(Math.random() * (30 - 10 + 1)) + 10;
+    if (desordened.includes(name)) {
+      const fishElement = fishRef.current;
+      const randomX = Math.floor(Math.random() * 80);
+      fishElement.style.top = `${Math.floor(Math.random() * 200)}px`;
+      fishElement.style.left = `${randomX}px`;
+    } 
 
-    fishElement.style.left = `${randomX}px`;
-    fishElement.style.animationDuration = `${randomSpeed}s`;
-  }, []);
+    if(!desordened.includes(name)) {
+      const fishElement = fishRef.current;
+      fishElement.style.top = '0px';
+      fishElement.style.left = '0px';
+    }
+  }, [desordened, name]);
+
+  const orderIcon = () => {
+    if(desordened.includes(name)) {
+      setDesordened(desordened.filter(item => item !== name));
+    }
+  }
 
   return (
-    <div className='fish' ref={fishRef} onMouseOver={() => setHoverActive(name)} onMouseLeave={() => setHoverActive(false)}>
+    <div className='fish' ref={fishRef} onMouseOver={() => setHoverActive(name)} onMouseLeave={() => setHoverActive(false)} onClick={() => orderIcon()}>
       <Image src={icon} width={80} height={80} style={{
         transform: `${hoverActive === name ? 'scale(1.2) rotate(0deg)' : 'scale(1) rotate(0deg)'}`,
         transition: 'all 0.3s ease',
-        opacity: `${hoverActive ? 
-            hoverActive === name ? '1' : '0.6'    
-        : '1'}`
-      }}/>
+        opacity: `${hoverActive ?
+          hoverActive === name ? '1' : '0.6'
+          : '1'}`
+      }} />
       <p className='name'>{name}</p>
 
       <style jsx>{`
         .fish {
           width: 80px;
           height: 80px;
-          right: -80px; /* Empieza fuera del contenedor en la derecha */
           animation: move linear infinite;
-          cursor: pointer;
+          cursor: pointer;  
           transition: all 0.3s ease;
           margin: 1rem;
+          position: relative;
         }
 
         .fish:hover .name {

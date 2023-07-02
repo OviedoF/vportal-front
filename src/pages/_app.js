@@ -1,11 +1,14 @@
 import Navbar from '@/components/navbar/Navbar'
 import '@/styles/globals.css'
+import '@/styles/animations.css'
+import Footer from '@/components/global/Footer'
 
 export default function App({ Component, pageProps }) {
   return (
     <>
       <Navbar />
       <Component {...pageProps} />
+      <Footer />
 
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
