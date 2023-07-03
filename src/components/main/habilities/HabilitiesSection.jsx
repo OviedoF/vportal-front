@@ -12,51 +12,58 @@ export default function HabilitiesSection() {
                 <h2>¿Por qué nosotros?</h2>
 
                 <HabilityCard image={'/images/habilities/brushes.png'} title={'Diseños de primer nivel'}>
-                    <p style={{
+                    <span style={{
                         marginBottom: '20px',
                     }}>
                         Si algo sabemos en VPortal, es que la primera impresión siempre entra por lo ojos. Sabiendo esto, ¿no es prudencial hacer un diseño atractivo, moderno y con buena experiencia del usuario?
-                    </p>
+                    </span>
+                    <br />
+                    <br />
 
-                    <p>
+                    <span>
                         ¡Sí! ¡y por eso estamos acá para ayudarte!
-                    </p>
+                    </span>
                 </HabilityCard>
 
                 <HabilityCard reverse image='/images/habilities/idea.png' title={'¡Te entendemos!'}>
-                    <p style={{
+                    <span style={{
                         marginBottom: '20px',
                     }}>
                         Sabemos lo lindo que es tener una idea y querer llevarla a cabo (así nació VPortal). Pero también sabemos lo difícil que es encontrar a alguien que te entienda y te ayude a plasmarla en la realidad.
-                    </p>
+                    </span>
+                    <br />
+                    <br />
 
-                    <p>
+                    <span>
                         ¡Por eso estamos acá! ¡Somos tu <b>PORTAL</b>!
-                    </p>
+                    </span>
                 </HabilityCard>
 
                 <HabilityCard image='/images/habilities/innovation.png' title={'¡Nos encanta tu idea!'}>
-                    <p style={{
+                    <span style={{
                         marginBottom: '20px',
                     }}>
                         Nos encanta cambiar el mundo, y sabemos que tu idea puede hacerlo. Por eso, nos encanta trabajar con ideas innovadoras y que generen un impacto positivo en la sociedad.
-                    </p>
+                    </span>
 
-                    <p>
+                    <br />
+                    <br />
+
+                    <span>
                         ¡No te preocupes! ¡Nosotros te ayudamos a llevarla a cabo!
-                    </p>
+                    </span>
                 </HabilityCard>
 
                 <HabilityCard reverse image='/images/habilities/quick.png' title={'No nos olvidemos de lo técnico'}>
-                    <p style={{
+                    <span style={{
                         marginBottom: '20px',
                     }}>
                         Sabemos que no solo es importante que tu idea sea buena, sino que también es importante que sea rápida y eficiente. Por eso, nos encargamos de que tu aplicación sea lo más rápida y eficiente posible.
-                    </p>
+                    </span>
                 </HabilityCard>
 
                 <HabilityCard full image='/images/habilities/virtue.png' title={'¿Quieres seguir?'}>
-                    <p style={{
+                    <span style={{
                         marginBottom: '20px',
                     }}>
                         ¿Aún no te convencemos? ¡No te preocupes! ¡Tenemos más!: <br />
@@ -68,7 +75,7 @@ export default function HabilitiesSection() {
                         <b>Soporte</b>: Sabemos que a veces las cosas no salen como uno quiere, y por eso nos encargamos de que tu aplicación siempre esté funcionando. <br />
                         <br />
                         <b>¡Y mucho más!</b>
-                    </p>
+                    </span>
                 </HabilityCard>
             </div>
 
