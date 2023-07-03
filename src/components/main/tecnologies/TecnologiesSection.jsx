@@ -127,12 +127,10 @@ export default function TecnologiesSection({hoverActive, setHoverActive}) {
         }
 
         setDesordened(tecnologiesArray.map((fish) => fish.name));
-
-        console.log(timesActive)
     }
 
     return (
-        <section className='tecnologies'>
+        <section className='tecnologies' id='tecnologies'>
             <HabilitiesBottomWave />
             <div className="background" />
 
@@ -307,6 +305,35 @@ export default function TecnologiesSection({hoverActive, setHoverActive}) {
 
                 100% {
                     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                }
+            }
+
+            @media screen and (max-width: 1108px) {
+                .tecnologies {
+                    padding-top: 17rem;
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+                .tecnologies {
+                    padding-top: 10rem;
+                }
+
+                .fishbowl {
+                    height: 80vh;
+                    margin-bottom: ${desordened.length === 0 ? '0' : '10rem'};
+                }
+
+                .super_duper_extra_dangereous{
+                    align-self: center;
+                }
+
+                .btn-danger:hover ~ span{
+                    display: none;
+                }
+
+                p {
+                    font-size: 1rem;
                 }
             }
         `}</style>

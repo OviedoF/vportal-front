@@ -192,6 +192,14 @@ export default function AboutImages() {
                     transform: translateY(100%);
                 }
             }
+
+            @media screen and (max-width: 1100px) {
+                .images {
+                    width: 100%;
+                    height: 400px;
+                    float: none;
+                }
+            }
             `}</style>
         </div>
     )

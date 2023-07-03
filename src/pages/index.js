@@ -21,7 +21,7 @@ export default function index() {
 
         <style jsx>{`
             main {
-                
+                overflow: hidden;
             }
         `}</style>
     </main>

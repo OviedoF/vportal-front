@@ -45,6 +45,8 @@ export default function HeroScene() {
         };
         resize();
 
+        window.addEventListener("resize", resize);
+
         //load model
         const loadingManager = new THREE.LoadingManager(
             () => {
@@ -158,6 +160,7 @@ export default function HeroScene() {
                 gui.destroy();
             } catch (e) {
             }
+            window.removeEventListener("resize", resize);
         };
 
     }, [])
@@ -174,6 +177,25 @@ export default function HeroScene() {
                     position: relative;
                     top: 0;
                     left: -30px;
+                }
+
+                @media (max-width: 1150px) {
+                    .scene {
+                        height: 90%;
+                        left: 0px;
+                    }
+                }
+
+                @media (max-width: 1000px) {
+                    .scene {
+                        height: 80%;
+                    }
+                }
+
+                @media (max-width: 700px) {
+                    .scene {
+                        height: 50%;
+                    }
                 }
             `}</style>
         </>

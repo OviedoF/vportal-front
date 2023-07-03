@@ -10,9 +10,9 @@ export default function TecnologyIcon({ setHoverActive, hoverActive, icon, name,
       const randomX = Math.floor(Math.random() * 80);
       fishElement.style.top = `${Math.floor(Math.random() * 200)}px`;
       fishElement.style.left = `${randomX}px`;
-    } 
+    }
 
-    if(!desordened.includes(name)) {
+    if (!desordened.includes(name)) {
       const fishElement = fishRef.current;
       fishElement.style.top = '0px';
       fishElement.style.left = '0px';
@@ -20,20 +20,21 @@ export default function TecnologyIcon({ setHoverActive, hoverActive, icon, name,
   }, [desordened, name]);
 
   const orderIcon = () => {
-    if(desordened.includes(name)) {
+    if (desordened.includes(name)) {
       setDesordened(desordened.filter(item => item !== name));
     }
   }
 
   return (
     <div className='fish' ref={fishRef} onMouseOver={() => setHoverActive(name)} onMouseLeave={() => setHoverActive(false)} onClick={() => orderIcon()}>
-      <Image src={icon} width={80} height={80} style={{
-        transform: `${hoverActive === name ? 'scale(1.2) rotate(0deg)' : 'scale(1) rotate(0deg)'}`,
-        transition: 'all 0.3s ease',
-        opacity: `${hoverActive ?
-          hoverActive === name ? '1' : '0.6'
-          : '1'}`
-      }} />
+
+        <Image src={icon} fill style={{
+          transform: `${hoverActive === name ? 'scale(1.2) rotate(0deg)' : 'scale(1) rotate(0deg)'}`,
+          transition: 'all 0.3s ease',
+          opacity: `${hoverActive ?
+            hoverActive === name ? '1' : '0.6'
+            : '1'}`
+        }} />
       <p className='name'>{name}</p>
 
       <style jsx>{`
@@ -58,6 +59,36 @@ export default function TecnologyIcon({ setHoverActive, hoverActive, icon, name,
           padding: 0.5rem;
           opacity: 0;
           transition: all 0.3s ease;
+          position: absolute;
+          bottom: -3rem;
+          width: 100%;
+        }
+
+        @media (max-width: 1100px) {
+          .fish {
+            width: 60px;
+            height: 60px;
+            text-align: center;
+          }
+
+          .name {
+            font-size: 0.8rem;
+            padding: 0;
+          }
+        }
+
+        @media (max-width: 800px) {
+          .fish {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+          }
+
+          .name {
+            font-size: 0.6rem;
+            padding: 0;
+            bottom: -1.5rem;
+          }
         }
       `}</style>
     </div>

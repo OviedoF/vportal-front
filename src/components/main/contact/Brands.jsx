@@ -39,7 +39,7 @@ export default function Brands() {
                 <ul className='slider'>
                     {brands.map((brand, index) => (
                         <li className='brand' key={index}>
-                            <Image src={brand.image} alt={brand.name} width={150} height={150} style={{
+                            <Image src={brand.image} alt={brand.name} fill style={{
                                 objectFit: 'contain',
                                 filter: 'grayscale(50%)'
                             }} />
@@ -50,7 +50,7 @@ export default function Brands() {
                 <ul className='slider'>
                     {brands.map((brand, index) => (
                         <li className='brand' key={index}>
-                            <Image src={brand.image} alt={brand.name} width={150} height={150} style={{
+                            <Image src={brand.image} alt={brand.name} fill style={{
                                 objectFit: 'contain',
                                 filter: 'grayscale(50%)'
                             }} />
@@ -105,11 +105,12 @@ export default function Brands() {
 
             .brand {
                 margin: 0 50px;
-                width: 200px;
-                height: 200px;
+                width: 150px;
+                height: 150px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                position: relative;
             }
 
             @keyframes scroll {
@@ -120,6 +121,27 @@ export default function Brands() {
                 100% {
                   -webkit-transform: translateX(-100%);
                   transform: translateX(-100%);
+                }
+            }
+
+            @media screen and (max-width: 1100px) {
+                .brand{
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+
+            @media screen and (max-width: 800px) {
+                .brand{
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+
+            @media screen and (max-width: 600px) {
+                .brand{
+                    width: 60px;
+                    height: 60px;
                 }
             }
             `}</style>

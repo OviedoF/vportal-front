@@ -9,7 +9,7 @@ export default function Footer() {
 
         <style jsx>{`
             footer {
-                margin: 200px 0px 50px 0px;
+                margin: 0px 0px 50px 0px;
                 padding: 20px var(--padding-sections-horizontal);
 
             }

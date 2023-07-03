@@ -220,6 +220,25 @@ export default function ConnectedSVG() {
                         #Vector {
                             fill: var(--color-two-svg);
                         }
+
+                        @media only screen and (max-width: 1100px){
+                            .world_connected{
+                                height: 400px;
+                            }
+                        }
+
+                        @media only screen and (max-width: 900px){
+                            .world_connected{
+                                height: 300px;
+                            }
+                        }
+
+                        @media only screen and (max-width: 600px){
+                            .world_connected{
+                                height: 300px;
+                                width: 100%;
+                            }
+                        }
             `}</style>
         </div>
     )

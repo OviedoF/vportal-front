@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import styles from './Navbar.module.scss';
 import Link from 'next/link';
+import { Link as ScrollLink } from 'react-scroll';
 
 const Navbar = () => {
     const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -14,7 +15,7 @@ const Navbar = () => {
         const handleScroll = () => {
             const currentScrollPos = window.pageYOffset;
             const visible = prevScrollPos > currentScrollPos;
-            setVisible(visible); 
+            setVisible(visible);
             setPrevScrollPos(currentScrollPos);
         };
         window.addEventListener('scroll', handleScroll);
@@ -24,18 +25,35 @@ const Navbar = () => {
     return (
         <header id={styles.header} className={`${styles.navbar} ${visible ? styles.navbar__visible : styles.navbar__hidden}`}>
             <nav id={styles.navbar}>
-                {/* <div className={styles.nav_wrapper}>
-                    <Link href={routes.home} className={styles.logo} style={{ padding: 1 }}>
-                        <img src={'https://res.cloudinary.com/dmoqdwvnr/image/upload/v1679408957/ying-07_bpiryd.webp'} alt="logo" style={{ height: '100%', objectFit: 'contain', transform: 'scale(1)' }} />
-                    </Link>
-
+                <div className={styles.nav_wrapper}>
                     <ul id={styles.menu}>
-                        <li><Link href={routes.home}>Inicio</Link></li>
-                        <li><Link href={routes.home}>Productos</Link></li>
-                        <li><Link href={routes.home}>Contacto</Link></li>
-                        <li><Link href={routes.home}>Talles</Link></li>
+                        <li>
+                            <ScrollLink to="hero" smooth={true} duration={1000} offset={-50}>
+                                Inicio
+                            </ScrollLink>
+                        </li>
+                        <li>
+                            <ScrollLink to="about" smooth={true} duration={1000} offset={-50}>
+                                Quiénes somos
+                            </ScrollLink>
+                        </li>
+                        <li>
+                            <ScrollLink to="habilities" smooth={true} duration={1000} offset={-50}>
+                                Por qué nosotros
+                            </ScrollLink>
+                        </li>
+                        <li>
+                            <ScrollLink to="tecnologies" smooth={true} duration={1000} offset={-50}>
+                                Nuestras tecnologías
+                            </ScrollLink>
+                        </li>
+                        <li>
+                            <ScrollLink to="contact" smooth={true} duration={1000} offset={-50}>
+                                Contacto
+                            </ScrollLink>
+                        </li>
                     </ul>
-                </div> */}
+                </div>
             </nav>
 
             <div className={styles.menuIcon} onClick={() => setMenuToggle(!menuToggle)}>
@@ -53,17 +71,31 @@ const Navbar = () => {
                 }} />
 
                 <ul id={styles.menu}>
-                    <li onClick={() => setMenuToggle(false)}>
-                        <Link href={routes.home}>Inicio</Link>
+                    <li >
+                        <ScrollLink onClick={() => setMenuToggle(false)} to="hero" smooth={true} duration={1000} offset={-50}>
+                            Inicio
+                        </ScrollLink>
                     </li>
-                    <li onClick={() => setMenuToggle(false)}>
-                        <Link href={routes.home}>Productos</Link>
+                    <li >
+                        <ScrollLink onClick={() => setMenuToggle(false)} to="about" smooth={true} duration={1000} offset={-50}>
+                            Quiénes somos
+                        </ScrollLink>
                     </li>
-                    <li onClick={() => setMenuToggle(false)}>
-                        <Link href={routes.home}>Contacto</Link>
+                    <li >
+                        <ScrollLink onClick={() => setMenuToggle(false)} to="habilities" smooth={true} duration={1000} offset={-50}>
+                            Por qué nosotros
+                        </ScrollLink>
                     </li>
-                    <li onClick={() => setMenuToggle(false)}>
-                        <Link href={routes.home}>Talles</Link>
+                    <li >
+                        <ScrollLink onClick={() => setMenuToggle(false)} to="tecnologies" smooth={true} duration={1000} offset={-50}>
+                            Nuestras tecnologías
+                        </ScrollLink>
+                    </li>
+
+                    <li >
+                        <ScrollLink onClick={() => setMenuToggle(false)} to="contact" smooth={true} duration={1000} offset={-50}>
+                            Contacto
+                        </ScrollLink>
                     </li>
                 </ul>
 

@@ -38,6 +38,31 @@ export default function Connected() {
                 width: 60%;
                 height: 100%;
             }
+
+            @media (max-width: 1100px) {
+                #connected {
+                    flex-direction: column;
+                    height: auto;
+                    padding: 0px 2rem;
+                }
+
+                #connected .text {
+                    margin-top: 2rem;
+                    width: 100%;
+                }
+            }
+
+            @media (max-width: 700px) {
+                #connected {
+                    padding: 0px 1rem;
+                }
+
+                #connected .text p {
+                    font-size: 1rem;
+                    text-align: center;
+                    line-height: 1.5rem;
+                }
+            }
         
         `}</style>
 

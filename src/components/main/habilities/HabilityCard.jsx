@@ -1,22 +1,21 @@
 import Image from 'next/image'
 import React from 'react'
 
-export default function HabilityCard({ reverse, full, image, title }) {
+export default function HabilityCard({ reverse, full, image, title, children}) {
   return (
     <div className='card'>
 
       <div className='card_text'>
         <h3>{title}</h3>
         <p>
-          Si algo sabemos en VPortal, es que la primera impresión siempre entra por lo ojos. Sabiendo esto, ¿no es prudencial hacer un diseño atractivo, moderno y con buena experiencia del usuario?
-        </p>
-
-        <p>
-          ¡Sí! ¡y por eso estamos acá para ayudarte!
+          {children}
         </p>
       </div>
 
-      <Image src={image} width={200} height={150} />
+      <Image src={image} width={200} height={150} style={{
+        objectFit: 'contain',
+        margin: 'auto 0',
+      }}/>
 
       <style jsx>{`
           .card{
@@ -54,6 +53,40 @@ export default function HabilityCard({ reverse, full, image, title }) {
 
           .card:hover{
               box-shadow: 0 0 10px rgba(0,0,0,0.5);
+          }
+          
+          @media (max-width: 1100px) {
+            .card_text h3 {
+              font-size: 1.2rem;
+            }
+
+            .card_text p {
+              font-size: 0.8rem;
+              line-height: 1.2rem;
+            }
+          }
+
+          @media (max-width: 900px) {
+            .card {
+              width: 100%;
+              padding: 20px 10px;
+            }
+          }
+
+          @media (max-width: 600px) {
+            .card{
+              flex-direction: column;
+              align-items: center;
+            }
+
+            .card_text h3 {
+              text-align: center;
+            }
+
+            .card_text p {
+              text-align: center;
+              margin-bottom: 50px 0;
+            }
           }
         `}</style>
     </div>
