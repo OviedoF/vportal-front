@@ -2,10 +2,20 @@ import Navbar from '@/components/navbar/Navbar'
 import '@/styles/globals.css'
 import '@/styles/animations.css'
 import Footer from '@/components/global/Footer'
+import Head from 'next/head'
 
 export default function App({ Component, pageProps }) {
   return (
     <>
+      <Head>
+        <title>VPortal | Desarrollo de software</title>
+        <meta name="description" content={`
+          VPortal es una empresa de desarrollo de software que se especializa en la creación de aplicaciones web y móviles.
+          Nuestro objetivo es ayudar a las empresas a crecer y a mejorar sus procesos mediante el uso de la tecnología.
+        `} />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       <Navbar />
       <Component {...pageProps} />
       <Footer />
