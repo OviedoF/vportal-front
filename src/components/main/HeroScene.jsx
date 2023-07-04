@@ -63,7 +63,7 @@ export default function HeroScene() {
         );
         const gltfLoader = new GLTFLoader(loadingManager);
         const textureLoader = new THREE.TextureLoader();
-        const textureBaseUrl = process.env.PUBLIC_URL + '/textures/';
+        const textureBaseUrl = '/textures/';
         const planetTexture = textureLoader.load(textureBaseUrl + 'Planet_baseColor.png');
         const cloudTexture = textureLoader.load(textureBaseUrl + 'Clouds_baseColor.png');
 

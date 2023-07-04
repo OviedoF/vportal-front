@@ -15,7 +15,7 @@ export default function HabilityCard({ reverse, full, image, title, children}) {
       <Image src={image} width={200} height={150} style={{
         objectFit: 'contain',
         margin: 'auto 0',
-      }}/>
+      }} alt={title}/>
 
       <style jsx>{`
           .card{
