@@ -155,7 +155,7 @@ export default function TecnologiesSection({hoverActive, setHoverActive}) {
                 <div className='super_duper_extra_sadly__image' animation="appearRight">
                     <Image src='/images/bot/sadly.png' fill style={{
                         objectFit: 'contain'
-                    }} l />
+                    }} alt='Bot triste' />
                 </div>
 
                 <div className='super_duper_extra_sadly__text' animation="appearRight">
@@ -175,7 +175,7 @@ export default function TecnologiesSection({hoverActive, setHoverActive}) {
                 <div className='super_duper_extra_happy__image' animation="appearRight">
                     <Image src='/images/bot/happy.png' fill style={{
                         objectFit: 'contain'
-                    }} l />
+                    }} alt='Bot feliz' />
                 </div>
 
                 {timesActive === 1 &&

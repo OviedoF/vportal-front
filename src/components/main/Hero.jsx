@@ -1,5 +1,6 @@
 import React from 'react'
 import HeroScene from './HeroScene';
+import { Link } from 'react-scroll';
 
 export default function Hero() {
     return (
@@ -16,8 +17,17 @@ export default function Hero() {
                 <h2>Desarrolladores de <span>aplicaciones</span> <span className='dreams'>sueños</span>.</h2>
 
                 <div className="buttons">
-                    <a href="#contact" className="btn">Conócenos!</a>
-                    <a href="#contact" className="btn margin">Contáctanos!</a>
+                    <Link to='about' smooth={true} duration={1000} style={{
+                        width: '100%'
+                    }}>
+                        <p className="btn">Conoce más</p>
+                    </Link>
+
+                    <Link to='contact' smooth={true} duration={1000} style={{
+                        width: '100%'
+                    }}>
+                        <p className="btn margin">Contáctanos</p>
+                    </Link>
                 </div>
             </div>
 
@@ -99,6 +109,7 @@ export default function Hero() {
                 text-decoration: none;
                 border-radius: 10px;
                 transition: background-color 0.3s ease;
+                cursor: pointer;
             }
 
             .btn:hover {

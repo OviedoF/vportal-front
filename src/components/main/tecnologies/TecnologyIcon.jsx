@@ -34,7 +34,7 @@ export default function TecnologyIcon({ setHoverActive, hoverActive, icon, name,
           opacity: `${hoverActive ?
             hoverActive === name ? '1' : '0.6'
             : '1'}`
-        }} />
+        }} alt={name} />
       <p className='name'>{name}</p>
 
       <style jsx>{`

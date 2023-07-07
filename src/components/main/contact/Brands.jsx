@@ -6,10 +6,10 @@ const brands = [{
     image: "/images/brands/ocha.png"
 }, {
     name: "Empetel",
-    image: "/images/brands/empetel.svg"
+    image: "/images/brands/empetel.png"
 }, {
     name: "Fuku Shop",
-    image: "/images/brands/fuku.webp"
+    image: "/images/brands/fukushop.webp"
 }, {
     name: "Eventos Tecno",
     image: "/images/brands/julianwinners.webp"
@@ -21,7 +21,7 @@ const brands = [{
     image: "/images/brands/glaxo.png"
 }, {
     name: "UNAB",
-    image: "/images/brands/unab.png"
+    image: "/images/brands/unabchile.png"
 }, {
     name: "Biznes",
     image: "/images/brands/biznes.png"
