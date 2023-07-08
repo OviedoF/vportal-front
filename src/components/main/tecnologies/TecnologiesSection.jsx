@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import HabilitiesBottomWave from '../habilities/HabilitiesBottomWave'
 import TecnologyIcon from './TecnologyIcon'
 import Image from 'next/image'
+import { useTranslation } from 'next-i18next'
 
 const tecnologiesArray = [
     {
@@ -120,6 +121,7 @@ export default function TecnologiesSection({hoverActive, setHoverActive}) {
     const [tecnologies, setTecnologies] = useState(tecnologiesArray);
     const [desordened, setDesordened] = useState([]);
     const [timesActive, setTimesActive] = useState(0)
+    const { t } = useTranslation('home');
 
     const randomizeTecnologies = () => {
         if (desordened.length === 0) {
@@ -134,8 +136,12 @@ export default function TecnologiesSection({hoverActive, setHoverActive}) {
             <HabilitiesBottomWave />
             <div className="background" />
 
-            <h2>¡Conoce nuestras tecnologías!</h2>
-            <p>¡Te aseguramos que te caerán bien (muy probablemente)!</p>
+            <h2>
+                {t('tecnologies.title')}
+            </h2>
+            <p>
+                {t('tecnologies.text')}
+            </p>
 
             <div className="fishbowl">
                 {tecnologies.map((fish, index) => (
@@ -144,7 +150,9 @@ export default function TecnologiesSection({hoverActive, setHoverActive}) {
             </div>
 
             <div className='super_duper_extra_dangereous'>
-                <button className='btn btn-danger' onClick={(e) => randomizeTecnologies()}>NO TOCAR</button>
+                <button className='btn btn-danger' onClick={(e) => randomizeTecnologies()}>
+                    {t('tecnologies.dontTouch')}
+                </button>
                 {[...Array(5)].map((e, i) => <span key={i} style={{
                     animationDuration: `${(i + 1) * 0.2}s`,
                     marginLeft: `${i === 0 ? '2rem' : '1rem'}`
@@ -160,13 +168,13 @@ export default function TecnologiesSection({hoverActive, setHoverActive}) {
 
                 <div className='super_duper_extra_sadly__text' animation="appearRight">
                     {timesActive === 1 && <>
-                        <p>¡Oh no! estuve todo el día acomodando esos botones :(</p>
-                        <p>¿Puedes ayudarme a acomodarlos con tu ratón, por favor?</p>
+                        <p>{t("tecnologies.sadbot.text1_1")}</p>
+                        <p>{t("tecnologies.sadbot.text1_2")}</p>
                     </>}
 
                     {timesActive > 1 && <>
-                        <p>¡Oh no, otra vez! :(</p>
-                        <p>Tanto que me habías ayudado</p>
+                        <p>{t("tecnologies.sadbot.text2_1")}</p>
+                        <p>{t("tecnologies.sadbot.text2_2")}</p>
                     </>}
                 </div>
             </div>}
@@ -180,12 +188,16 @@ export default function TecnologiesSection({hoverActive, setHoverActive}) {
 
                 {timesActive === 1 &&
                     <div className='super_duper_extra_happy__text' animation="appearRight">
-                    <p>¡Muchas gracias! ¡Ahora puedo seguir trabajando!</p>
+                    <p>
+                        {t("tecnologies.happybot.text1")}
+                    </p>
                 </div>}
 
                 {timesActive > 1 && <>
                     <div className='super_duper_extra_happy__text' animation="appearRight">
-                        <p>¡Muchas gracias otra vez! Eres muy buena persona</p>
+                        <p>
+                        {t("tecnologies.happybot.text2")}
+                        </p>
                     </div>
                 </>}
             </div>}

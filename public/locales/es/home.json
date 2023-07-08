@@ -1,0 +1,64 @@
+{
+  "hero.weAre": "Somos",
+  "hero.developersOf": "Desarrolladores de",
+  "hero.applications": "aplicaciones",
+  "hero.dreams": "sueños",
+  "hero.buttonOne": "Conoce más",
+  "hero.buttonTwo": "Contáctanos",
+
+  "about.title": "¿Quienes somos?",
+  "about.text1": "Somos una empresa de desarrollo de software y UX/UI que se destaca por la calidad de nuestros diseños y la fluidez de nuestras aplicaciones.",
+  "about.text2": "Nos enorgullece brindar soluciones tecnológicas innovadoras y efectivas que generen impacto y agreguen valor a nuestros clientes y sus usuarios.Ya sea que necesites una aplicación móvil, un sitio web o una solución de software empresarial, estamos aquí para ayudarte a que tu idea se convierta en realidad.",
+  "about.text3_1": "¡Permítenos ser tu",
+  "about.text3_2": "al éxito!",
+
+  "connected.title": "¡El portal perfecto para tu proyecto!",
+  "connected.text1": "En VPortal, nos enorgullece ser el portal que conecta tu proyecto desde tu imaginación al mundo.",
+  "connected.text2": "Nuestro equipo de expertos trabaja en estrecha colaboración contigo para entender tu visión y tus objetivos.",
+
+  "whyUs.title": "¿Por qué nosotros?",
+  "whyUs.reason1.title": "Diseños de primer nivel",
+  "whyUs.reason1.text": "Si algo sabemos en VPortal, es que la primera impresión siempre entra por lo ojos. Sabiendo esto, ¿no es prudencial hacer un diseño atractivo, moderno y con buena experiencia del usuario?",
+  "whyUs.reason1.footer": "¡Sí! ¡y por eso estamos acá para ayudarte!",
+
+  "whyUs.reason2.title": "¡Te entendemos!",
+  "whyUs.reason2.text": "Sabemos lo lindo que es tener una idea y querer llevarla a cabo (así nació VPortal). Pero también sabemos lo difícil que es encontrar a alguien que te entienda y te ayude a plasmarla en la realidad.",
+  "whyUs.reason2.footer": "¡Por eso estamos acá! ¡Somos tu PORTAL!",
+
+  "whyUs.reason3.title": "¡Nos encanta tu idea!",
+  "whyUs.reason3.text": "Nos encanta cambiar el mundo, y sabemos que tu idea puede hacerlo. Por eso, nos encanta trabajar con ideas innovadoras y que generen un impacto positivo en la sociedad.",
+  "whyUs.reason3.footer": "¡No te preocupes! ¡Nosotros te ayudamos a llevarla a cabo!",
+
+  "whyUs.reason4.title": "No nos olvidemos de lo técnico",
+  "whyUs.reason4.text": "Sabemos que no solo es importante que tu idea sea buena, sino que también es importante que sea rápida y eficiente. Por eso, nos encargamos de que tu aplicación sea lo más rápida y eficiente posible.",
+  "whyUs.reason4.footer": "",
+
+  "whyUs.reason5.title": "¿Quieres seguir?",
+  "whyUs.reason5.text": "¿Aún no te convencemos? ¡No te preocupes! ¡Tenemos más!:",
+  "whyUs.reason5.text_2.title": "Calidad:",
+  "whyUs.reason5.text_2.text": "Nos encanta hacer las cosas bien, y por eso nos esforzamos en que todo lo que hacemos sea de la mejor calidad posible.",
+  "whyUs.reason5.text_3.title": "Seguridad:",
+  "whyUs.reason5.text_3.text": "Sabemos que la seguridad es importante, y por eso nos encargamos de que tu aplicación sea lo más segura posible.",
+  "whyUs.reason5.text_4.title": "Soporte:",
+  "whyUs.reason5.text_4.text": "Sabemos que las cosas pueden salir mal, y por eso te ofrecemos soporte para que puedas resolver cualquier problema que tengas con tu aplicación.",
+  "whyUs.reason5.footer": "¡Y mucho más!",
+
+  "tecnologies.title": "¡Conoce nuestras tecnologías!",
+  "tecnologies.text": "¡Te aseguramos que te caerán bien (muy probablemente)!",
+  "tecnologies.dontTouch": "¡NO TOCAR!",
+  "tecnologies.sadbot.text1_1": "¡Oh no! estuve todo el día acomodando esos botones :(",
+  "tecnologies.sadbot.text1_2": "¿Puedes ayudarme a acomodarlos con tu ratón, por favor?",
+  "tecnologies.sadbot.text2_1": "¡Oh no, otra vez! :(",
+  "tecnologies.sadbot.text2_2": "Tanto que me habías ayudado",
+  "tecnologies.happybot.text1": "¡Muchas gracias! ¡Ahora puedo seguir trabajando!",
+  "tecnologies.happybot.text2": "¡Muchas gracias otra vez! Eres muy buena persona",
+
+  "contact.title": "¡¿Qué esperas?, contáctanos!",
+  "contact.disclaimer": "Ellos ya confían en nosotros, ¿y tú?",
+  "contact.form.title": "DÉJANOS UN MENSAJE",
+  "contact.form.name": "Nombre completo",
+  "contact.form.email": "Correo electrónico",
+  "contact.form.subject": "Asunto",
+  "contact.form.message": "Mensaje",
+  "contact.form.button": "Enviar"
+}

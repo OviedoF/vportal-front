@@ -1,24 +1,30 @@
 import React from 'react'
 import ConnectedSVG from './ConnectedSVG'
+import { useTranslation } from 'next-i18next';
 
 export default function Connected() {
-  return (
-    <section id='connected'>
-        <div className="text">
-            <h2>¡El portal perfecto para tu proyecto!</h2>
+    const { t } = useTranslation('home');
+    const { t: tCommon } = useTranslation('common');
 
-            <p>
-            En VPortal, nos enorgullece ser el portal que conecta tu proyecto desde tu imaginación al mundo. 
-            </p>
+    return (
+        <section id='connected'>
+            <div className="text">
+                <h2>
+                    {t('connected.title')}
+                </h2>
 
-            <p>
-            Nuestro equipo de expertos trabaja en estrecha colaboración contigo para entender tu visión y tus objetivos. 
-            </p>
-        </div>
+                <p>
+                    {t('connected.text1')}
+                </p>
 
-        <ConnectedSVG />
+                <p>
+                    {t('connected.text2')}
+                </p>
+            </div>
 
-        <style jsx>{`
+            <ConnectedSVG />
+
+            <style jsx>{`
             #connected {
                 width: 100%;
                 height: 60vh;
@@ -66,6 +72,6 @@ export default function Connected() {
         
         `}</style>
 
-    </section>
-  )
+        </section>
+    )
 }

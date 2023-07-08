@@ -1,9 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react'
+import { useTranslation } from 'next-i18next';
 
 export default function AboutImages() {
     const father = useRef(null)
     const actualChild = useRef(null)
     const [sectionActive, setSectionActive] = useState(1);
+    const {t: tCommon} = useTranslation('common');
 
     useEffect(() => {
         const sectionChange = () => {
@@ -68,7 +70,9 @@ export default function AboutImages() {
 
                 <h3 style={{
                     bottom: '0',
-                }}>Web Development</h3>
+                }}>
+                    {tCommon('webDevelopment')}
+                </h3>
             </div>}
 
             {sectionActive === 2  && <div className="image_item" id={2} ref={actualChild}>
@@ -96,7 +100,9 @@ export default function AboutImages() {
 
                 <h3 style={{
                     bottom: '0',
-                }}>UX/UI Design</h3>
+                }}>
+                    {tCommon('uxuiDesign')}
+                </h3>
             </div>}
 
             {sectionActive === 3 && <div className="image_item" id={3} ref={actualChild}>
@@ -122,7 +128,9 @@ export default function AboutImages() {
 
                 <h3 style={{
                     bottom: '0',
-                }}>App Development</h3>
+                }}>
+                    {tCommon('mobileDevelopment')}
+                </h3>
             </div>}
 
             <style jsx>{`

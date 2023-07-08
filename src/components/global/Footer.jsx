@@ -1,10 +1,13 @@
 import React from 'react'
+import { useTranslation } from 'next-i18next'
 
 export default function Footer() {
+  const {t} = useTranslation('common');
+  
   return (
     <footer>
         <p> 
-        Todos los derechos reservados &copy; {new Date().getFullYear()} - VPortal 
+         {t('footer.copyright')} {new Date().getFullYear()} - {t('name')}
         </p>
 
         <style jsx>{`

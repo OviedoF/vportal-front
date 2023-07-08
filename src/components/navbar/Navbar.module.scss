@@ -30,6 +30,105 @@
   transition: transform 0.3s ease;
 }
 
+#header .change_language{
+  position: absolute;
+  right: 0;
+  height: 100%;
+  background-color: #00000030;
+  width: 80px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-out;
+  z-index: 9999;
+
+  &:hover{
+    background-color: #00000050;
+  }
+
+  .container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 750px) {
+    left: 0;
+    right: unset;
+  }
+}
+
+#navbar .change_language_overlay{
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: #00000030;
+  animation: appear-change-language 0.2s ease-out forwards;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 100px 20px 20px;
+
+    .language{
+      cursor: pointer;
+      transition: all 0.2s ease-out;
+
+      a{
+        font-size: 16px;
+        color: #fefefe;
+        margin: 0;
+      }
+
+      &:hover{
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  @media (max-width: 750px) {
+    left: 0;
+    right: unset;
+    background-color: #00000090;
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    ul {
+      background-color: var(--color-vdark);
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+
+      .language{
+        text-align: center;
+
+        a{
+          display: block;
+          text-align: center;
+          font-size: 25px;
+        }
+      }
+    }
+  }
+  
+  @keyframes appear-change-language {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
 #navbar {
   position: fixed;
   top: 0;
@@ -407,7 +506,7 @@
   height: 100vh;
   -webkit-transition: transform 0.2s ease-out;
   transition: transform 0.2s ease-out;
-  z-index: 12;
+  z-index: 99999;
 }
 
 .overlay_menu.active {

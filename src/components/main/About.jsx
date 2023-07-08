@@ -1,7 +1,11 @@
 import React from 'react'
 import AboutImages from './AboutImages'
+import { useTranslation } from 'next-i18next';
 
 export default function About() {
+    const {t} = useTranslation('home');
+    const {t: tCommon} = useTranslation('common');
+    
     return (
         <section className='about' id='about'>
             
@@ -14,12 +18,16 @@ export default function About() {
             <AboutImages />
 
             <div className="text">
-                <h2>¿Quienes somos?</h2>
-                <p>Somos una empresa de desarrollo de software y UX/UI que se destaca por la calidad de nuestros diseños y la fluidez de nuestras aplicaciones.</p>
+                <h2>{t('about.title')}</h2>
+                <p>
+                    {t('about.text1')}
+                </p>
 
-                <p>Nos enorgullece brindar soluciones tecnológicas innovadoras y efectivas que generen impacto y agreguen valor a nuestros clientes y sus usuarios.Ya sea que necesites una aplicación móvil, un sitio web o una solución de software empresarial, estamos aquí para ayudarte a que tu idea se convierta en realidad.</p>
+                <p>
+                    {t('about.text2')}
+                </p>
 
-                <p>¡Permítenos ser tu <strong>portal</strong> al éxito!</p>
+                <p>{t('about.text3_1')} <strong>{tCommon('portal')}</strong> {t('about.text3_2')}</p>
             </div>
 
             <style jsx>{`

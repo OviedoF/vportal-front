@@ -1,32 +1,44 @@
 import React from 'react'
 import HeroScene from './HeroScene';
 import { Link } from 'react-scroll';
+import { useTranslation } from 'next-i18next';
 
 export default function Hero() {
+    const {t} = useTranslation('home');
+    const {t: tCommon} = useTranslation('common');
+    
     return (
         <section id='hero'>
 
             <div className="text_hero">
                 <hr />
 
-                <h1>Somos
+                <h1>{t('hero.weAre')}
                     <br />
-                    <span>VPortal</span>
+                    <span>
+                        {tCommon('name')}
+                    </span>
                 </h1>
 
-                <h2>Desarrolladores de <span>aplicaciones</span> <span className='dreams'>sueños</span>.</h2>
+                <h2>{t('hero.developersOf')} <span>{t('hero.applications')}</span> <span className='dreams'>
+                    {t('hero.dreams')}    
+                </span>.</h2>
 
                 <div className="buttons">
                     <Link to='about' smooth={true} duration={1000} style={{
                         width: '100%'
                     }}>
-                        <p className="btn">Conoce más</p>
+                        <p className="btn">
+                            {t('hero.buttonOne')}
+                        </p>
                     </Link>
 
                     <Link to='contact' smooth={true} duration={1000} style={{
                         width: '100%'
                     }}>
-                        <p className="btn margin">Contáctanos</p>
+                        <p className="btn margin">
+                            {t('hero.buttonTwo')}
+                        </p>
                     </Link>
                 </div>
             </div>

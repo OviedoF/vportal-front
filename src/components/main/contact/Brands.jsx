@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import { useTranslation } from 'next-i18next'
 
 const brands = [{
     name: "Ocha",
@@ -31,9 +32,11 @@ const brands = [{
 }]
 
 export default function Brands() {
+    const { t } = useTranslation('home');
+
     return (
         <div className='brands_section'>
-            <h3 className='disclaimer'>Ellos ya confían en nosotros</h3>
+            <h3 className='disclaimer'>{t('contact.disclaimer')}</h3>
 
             <div className='brands'>
                 <ul className='slider'>

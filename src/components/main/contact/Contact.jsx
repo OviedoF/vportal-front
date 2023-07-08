@@ -1,10 +1,11 @@
 import Image from 'next/image'
 import React from 'react'
 import Brands from './Brands'
-
-
+import { useTranslation } from 'next-i18next'
 
 export default function Contact({ hoverActive }) {
+  const { t } = useTranslation('home');
+
   return (
     <section id='contact'>
       <div className='wave_container'>
@@ -13,7 +14,9 @@ export default function Contact({ hoverActive }) {
         </svg>
       </div>
 
-      <h2>¡Qué esperas, contáctanos!</h2>
+      <h2>
+        {t('contact.title')}
+      </h2>
 
       <Brands />
 
@@ -25,13 +28,13 @@ export default function Contact({ hoverActive }) {
               <input type="hidden" name="_autoresponse" value="¡Muchas gracias! hemos recibido tu mensaje. - VPortal" />
               <input type="hidden" name="_template" value="table"></input>
 
-              <p>DEJÁNOS UN MENSAJE</p>
-              <input type="text" placeholder="Nombre completo" name='name' /><br />
-              <input type="email" placeholder="Correo electrónico" name='email' /><br />
-              <input type="text" placeholder="Asunto" name='subject' /><br />
-              <textarea placeholder="Mensaje" name='message'></textarea><br />
+              <p>{t('contact.form.title')}</p>
+              <input type="text" placeholder={t('contact.form.name')} name='name' /><br />
+              <input type="email" placeholder={t('contact.form.email')} name='email' /><br />
+              <input type="text" placeholder={t('contact.form.subject')} name='subject' /><br />
+              <textarea placeholder={t('contact.form.message')} name='message'></textarea><br />
 
-              <input type='submit' value='Enviar' />
+              <input type='submit' value={t('contact.form.button')} />
           </form>
 
           <div className="drops">

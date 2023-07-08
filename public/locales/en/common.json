@@ -1,0 +1,18 @@
+{
+    "name": "VPortal",
+    "portal": "portal",
+    "webDevelopment": "Web Development",
+    "uxuiDesign": "UX/UI Design",
+    "mobileDevelopment": "Mobile Development",
+
+    "footer.copyright": "All rights reserved © ",
+
+    "navbar.home": "Home",
+    "navbar.about": "About",
+    "navbar.whyUs": "Why Choose Us",
+    "navbar.tecnologies": "Our Technologies",
+    "navbar.contact": "Contact",
+
+    "languages.spanish": "Spanish",
+    "languages.english": "English"
+}
