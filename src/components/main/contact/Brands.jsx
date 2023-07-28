@@ -29,6 +29,12 @@ const brands = [{
 }, {
     name: "Geek 4 dummies",
     image: "/images/brands/geek4dummies.webp"
+}, {
+    name: "Alhambra Guide",
+    image: "/images/brands/alhambraguide.webp"
+}, {
+    name: "Cortijo",
+    image: "/images/brands/cortijo.png"
 }]
 
 export default function Brands() {
